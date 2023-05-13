@@ -162,9 +162,6 @@ Untuk mengganti zona waktu silakan buka file `config/app.php`
 dan ganti nilai pada `timezone` sesuai dengan keinginan Anda.
 Silakan merujuk ke [dokumentasi php](https://www.php.net/manual/en/timezones.php) untuk nilai zona waktu yang bisa digunakan.
 
-## Demonstration / Demo
-Link video untuk proyek ini bisa dilihat di [YouTube](https://www.youtube.com/watch?v=dyatVEGavxo).
-
 ## Other / Lainnya
 Proyek ini menggunakan admin template [Sneat](https://github.com/themeselection/sneat-html-admin-template-free)
 
