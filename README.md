@@ -149,9 +149,9 @@ Setelah perintah di atas dijalankan, web app Anda bisa sudah bisa diakses
 ## Login
 Untuk login aplikasi silakan masukkan surel dan kata sandi berikut
 
-| Surel      | admin@admin.com |
+| Surel      | agusbaha@ikbis.ac.id |
 |------------|-----------------|
-| Kata Sandi | admin           |
+| Kata Sandi | Gaktau27           |
 
 ## Language / Bahasa
 Tersedia 2 pilihan bahasa untuk web app ini, bahasa Indonesia dan Inggris.
