@@ -57,7 +57,7 @@ Route::middleware(['auth'])->group(function () {
     Route::prefix('gallery')->as('gallery.')->group(function () {
         Route::get('incoming', [\App\Http\Controllers\LetterGalleryController::class, 'incoming'])->name('incoming');
         Route::get('outgoing', [\App\Http\Controllers\LetterGalleryController::class, 'outgoing'])->name('outgoing');
-        Route::get('outgoingsk', [\App\Http\Controllers\LetterGalleryController::class, 'outgoing'])->name('outgoingsk');
+        Route::get('outgoingsk', [\App\Http\Controllers\LetterGalleryController::class, 'outgoingsk'])->name('outgoingsk');
     });
 
     Route::prefix('reference')->as('reference.')->middleware(['role:admin'])->group(function () {

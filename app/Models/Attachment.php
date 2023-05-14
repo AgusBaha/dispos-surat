@@ -52,6 +52,11 @@ class Attachment extends Model
         return $this->scopeType($query, LetterType::OUTGOING);
     }
 
+    public function scopeOutgoingDecree($query)
+    {
+        return $this->scopeType($query, LetterType::OUTGOINGDECREE);
+    }
+
     public function scopeSearch($query, $search)
     {
         return $query->when($search, function($query, $find) {
