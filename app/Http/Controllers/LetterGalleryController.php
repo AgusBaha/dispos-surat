@@ -25,7 +25,7 @@ class LetterGalleryController extends Controller
         ]);
     }
 
-    public function outgoingsk(Request $request): View
+    public function outgoingDecree(Request $request): View
     {
         return view('pages.gallery.outgoingdecree', [
             'data' => Attachment::outgoingdecree()->render($request->search),

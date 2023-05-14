@@ -6,7 +6,7 @@
     </x-breadcrumb>
 
     <div class="card mb-4">
-        <form action="{{ route('transaction.outgoingsk.store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('transaction.outgoingDecree.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="card-body row">
                 <input type="hidden" name="type" value="outgoingdecree">

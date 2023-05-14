@@ -42,8 +42,8 @@
                             data-i18n="{{ __('menu.transaction.outgoing_letter') }}">{{ __('menu.transaction.outgoing_letter') }}</div>
                     </a>
                 </li>
-                <li class="menu-item {{ \Illuminate\Support\Facades\Route::is('transaction.outgoingsk.*') ? 'active' : '' }}">
-                    <a href="{{ route('transaction.outgoingsk.index') }}" class="menu-link">
+                <li class="menu-item {{ \Illuminate\Support\Facades\Route::is('transaction.outgoingDecree.*') ? 'active' : '' }}">
+                    <a href="{{ route('transaction.outgoingDecree.index') }}" class="menu-link">
                         <div
                             data-i18n="{{ __('menu.transaction.outgoing_letter_decree') }}">{{ __('menu.transaction.outgoing_letter_decree') }}</div>
                     </a>
@@ -68,8 +68,8 @@
                             data-i18n="{{ __('menu.agenda.outgoing_letter') }}">{{ __('menu.agenda.outgoing_letter') }}</div>
                     </a>
                 </li>
-                <li class="menu-item {{ \Illuminate\Support\Facades\Route::is('agenda.outgoingsk') ? 'active' : '' }}">
-                    <a href="{{ route('agenda.outgoingsk') }}" class="menu-link">
+                <li class="menu-item {{ \Illuminate\Support\Facades\Route::is('agenda.outgoingDecree') ? 'active' : '' }}">
+                    <a href="{{ route('agenda.outgoingDecree') }}" class="menu-link">
                         <div
                             data-i18n="{{ __('menu.agenda.outgoing_letter_decree') }}">{{ __('menu.agenda.outgoing_letter_decree') }}</div>
                     </a>
@@ -98,8 +98,8 @@
                             data-i18n="{{ __('menu.gallery.outgoing_letter') }}">{{ __('menu.gallery.outgoing_letter') }}</div>
                     </a>
                 </li>
-                <li class="menu-item {{ \Illuminate\Support\Facades\Route::is('gallery.outgoingsk') ? 'active' : '' }}">
-                    <a href="{{ route('gallery.outgoingsk') }}" class="menu-link">
+                <li class="menu-item {{ \Illuminate\Support\Facades\Route::is('gallery.outgoingDecree') ? 'active' : '' }}">
+                    <a href="{{ route('gallery.outgoingDecree') }}" class="menu-link">
                         <div
                             data-i18n="{{ __('menu.gallery.outgoing_letter_decree') }}">{{ __('menu.gallery.outgoing_letter_decree') }}</div>
                     </a>

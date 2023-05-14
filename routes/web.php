@@ -41,7 +41,7 @@ Route::middleware(['auth'])->group(function () {
     Route::prefix('transaction')->as('transaction.')->group(function () {
         Route::resource('incoming', \App\Http\Controllers\IncomingLetterController::class);
         Route::resource('outgoing', \App\Http\Controllers\OutgoingLetterController::class);
-        Route::resource('outgoingsk', \App\Http\Controllers\OutgoingLetterSkController::class);
+        Route::resource('outgoingDecree', \App\Http\Controllers\OutgoingLetterDecreeController::class);
         Route::resource('{letter}/disposition', \App\Http\Controllers\DispositionController::class)->except(['show']);
     });
 
@@ -50,14 +50,14 @@ Route::middleware(['auth'])->group(function () {
         Route::get('incoming/print', [\App\Http\Controllers\IncomingLetterController::class, 'print'])->name('incoming.print');
         Route::get('outgoing', [\App\Http\Controllers\OutgoingLetterController::class, 'agenda'])->name('outgoing');
         Route::get('outgoing/print', [\App\Http\Controllers\OutgoingLetterController::class, 'print'])->name('outgoing.print');
-        Route::get('outgoingsk', [\App\Http\Controllers\OutgoingLetterSkController::class, 'agenda'])->name('outgoingsk');
-        Route::get('outgoingsk/print', [\App\Http\Controllers\OutgoingLetterSkController::class, 'print'])->name('outgoingsk.print');
+        Route::get('outgoingDecree', [\App\Http\Controllers\OutgoingLetterDecreeController::class, 'agenda'])->name('outgoingDecree');
+        Route::get('outgoingDecree/print', [\App\Http\Controllers\OutgoingLetterDecreeController::class, 'print'])->name('outgoingDecree.print');
     });
 
     Route::prefix('gallery')->as('gallery.')->group(function () {
         Route::get('incoming', [\App\Http\Controllers\LetterGalleryController::class, 'incoming'])->name('incoming');
         Route::get('outgoing', [\App\Http\Controllers\LetterGalleryController::class, 'outgoing'])->name('outgoing');
-        Route::get('outgoingsk', [\App\Http\Controllers\LetterGalleryController::class, 'outgoingsk'])->name('outgoingsk');
+        Route::get('outgoingDecree', [\App\Http\Controllers\LetterGalleryController::class, 'outgoingDecree'])->name('outgoingDecree');
     });
 
     Route::prefix('reference')->as('reference.')->middleware(['role:admin'])->group(function () {

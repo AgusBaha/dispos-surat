@@ -14,13 +14,12 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
-class OutgoingLetterSkController extends Controller
+class OutgoingLetterDecreeController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @param Request $request
-     * @return View
+     * @return \Illuminate\Http\Response
      */
     public function index(Request $request): View
     {
@@ -33,7 +32,7 @@ class OutgoingLetterSkController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return View
+     * @return \Illuminate\Http\Response
      */
     public function create(): View
     {
@@ -45,8 +44,8 @@ class OutgoingLetterSkController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param StoreLetterRequest $request
-     * @return RedirectResponse
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
     public function store(StoreLetterRequest $request): RedirectResponse
     {
@@ -80,7 +79,56 @@ class OutgoingLetterSkController extends Controller
         }
     }
 
-     /**
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Letter $outgoingdecree): View
+    {
+        $data = $outgoingdecree->load(['classification', 'user', 'attachments']);
+        dd($data);
+        return view('pages.transaction.outgoingdecree.show', [
+            'data' => $outgoingdecree->load(['classification', 'user', 'attachments']),
+        ]);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+
+       /**
      * Display a listing of the outgoing letter agenda.
      *
      * @param Request $request
@@ -98,7 +146,7 @@ class OutgoingLetterSkController extends Controller
         ]);
     }
 
-    /**
+        /**
      * @param Request $request
      * @return View
      */
@@ -115,21 +163,6 @@ class OutgoingLetterSkController extends Controller
             'filter' => $request->filter,
             'config' => Config::pluck('value','code')->toArray(),
             'title' => $title,
-        ]);
-    }
-
-      /**
-     * Display the specified resource.
-     *
-     * @param Letter $outgoing
-     * @return View
-     */
-    public function show(Letter $outgoing): View
-    {
-        $data = $outgoing->load(['classification', 'user', 'attachments']);
-        dd($data);
-        return view('pages.transaction.outgoingdecree.show', [
-            'data' => $outgoing->load(['classification', 'user', 'attachments']),
         ]);
     }
 }

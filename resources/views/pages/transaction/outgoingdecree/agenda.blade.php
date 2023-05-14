@@ -37,7 +37,7 @@
                                     <button class="btn btn-primary"
                                             type="submit">{{ __('menu.general.filter') }}</button>
                                     <a
-                                        href="{{ route('agenda.outgoingsk.print') . '?' . $query }}"
+                                        href="{{ route('agenda.outgoingDecree.print') . '?' . $query }}"
                                         target="_blank"
                                         class="btn btn-primary">
                                         {{ __('menu.general.print') }}
@@ -66,7 +66,7 @@
                             <td><i class="fab fa-angular fa-lg text-danger me-3"></i>
                                 <strong>{{ $agenda->agenda_number }}</strong></td>
                             <td>
-                                <a href="{{ route('transaction.outgoingsk.show', $agenda) }}">{{ $agenda->reference_number }}</a>
+                                <a href="{{ route('transaction.outgoingDecree.show', $agenda) }}">{{ $agenda->reference_number }}</a>
                             </td>
                             <td>{{ $agenda->to }}</td>
                             <td>{{ $agenda->formatted_letter_date }}</td>
