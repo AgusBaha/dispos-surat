@@ -44,6 +44,7 @@ class StoreLetterRequest extends FormRequest
             'agenda_number' => ['required'],
             'from' => [Rule::requiredIf($this->type == LetterType::INCOMING->type())],
             'to' => [Rule::requiredIf($this->type == LetterType::OUTGOING->type())],
+            'to' => [Rule::requiredIf($this->type == LetterType::OUTGOINGDECREE->type())],
             'type' => ['required'],
             'reference_number' => ['required', Rule::unique('letters')],
             'received_date' => [Rule::requiredIf($this->type == LetterType::INCOMING->type())],

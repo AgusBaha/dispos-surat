@@ -45,7 +45,7 @@
                                     class="dropdown-item cursor-pointer btn-delete">{{ __('menu.general.delete') }}</span>
                             </form>
                         </div>
-                    @else
+                    @elseif($letter->type == 'outgoing')
                         <div class="dropdown-menu dropdown-menu-end"
                              aria-labelledby="dropdown-{{ $letter->type }}-{{ $letter->id }}">
                             @if(!\Illuminate\Support\Facades\Route::is('*.show'))
@@ -55,6 +55,23 @@
                             <a class="dropdown-item"
                                href="{{ route('transaction.outgoing.edit', $letter) }}">{{ __('menu.general.edit') }}</a>
                             <form action="{{ route('transaction.outgoing.destroy', $letter) }}" class="d-inline"
+                                  method="post">
+                                @csrf
+                                @method('DELETE')
+                                <span
+                                    class="dropdown-item cursor-pointer btn-delete">{{ __('menu.general.delete') }}</span>
+                            </form>
+                        </div>
+                    @else
+                        <div class="dropdown-menu dropdown-menu-end"
+                             aria-labelledby="dropdown-{{ $letter->type }}-{{ $letter->id }}">
+                            @if(!\Illuminate\Support\Facades\Route::is('*.show'))
+                                <a class="dropdown-item"
+                                   href="{{ route('transaction.outgoingsk.show', $letter) }}">{{ __('menu.general.view') }}</a>
+                            @endif
+                            <a class="dropdown-item"
+                               href="{{ route('transaction.outgoingsk.edit', $letter) }}">{{ __('menu.general.edit') }}</a>
+                            <form action="{{ route('transaction.outgoingsk.destroy', $letter) }}" class="d-inline"
                                   method="post">
                                 @csrf
                                 @method('DELETE')

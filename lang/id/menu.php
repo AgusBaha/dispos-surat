@@ -7,12 +7,14 @@ return [
         'menu' => 'Transaksi Surat',
         'incoming_letter' => 'Surat Masuk',
         'outgoing_letter' => 'Surat Keluar',
+        'outgoing_letter_decree' => 'Surat Keputusan',
         'disposition_letter' => 'Surat Disposisi',
     ],
     'agenda' => [
         'menu' => 'Buku Agenda',
         'incoming_letter' => 'Surat Masuk',
         'outgoing_letter' => 'Surat Keluar',
+        'outgoing_letter_decree' => 'Surat Keputusan',
         'disposition_letter' => 'Surat Disposisi',
         'filter_by' => 'Saring berdasarkan',
         'start_date' => 'Dari Tanggal',
@@ -22,6 +24,7 @@ return [
         'menu' => 'Galeri Surat',
         'incoming_letter' => 'Surat Masuk',
         'outgoing_letter' => 'Surat Keluar',
+        'outgoing_letter_decree' => 'Surat Keputusan',
         'disposition_letter' => 'Surat Disposisi',
     ],
     'reference' => [

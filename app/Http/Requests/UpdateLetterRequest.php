@@ -44,6 +44,7 @@ class UpdateLetterRequest extends FormRequest
             'agenda_number' => ['required'],
             'from' => [Rule::requiredIf($this->type == LetterType::INCOMING->type())],
             'to' => [Rule::requiredIf($this->type == LetterType::OUTGOING->type())],
+            'to' => [Rule::requiredIf($this->type == LetterType::OUTGOINGDECREE->type())],
             'reference_number' => ['required', Rule::unique('letters', 'reference_number')->ignore($this->id)],
             'received_date' => [Rule::requiredIf($this->type == LetterType::INCOMING->type())],
             'letter_date' => ['required'],

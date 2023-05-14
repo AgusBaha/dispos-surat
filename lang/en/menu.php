@@ -7,12 +7,14 @@ return [
         'menu' => 'Transaction',
         'incoming_letter' => 'Incoming Letter',
         'outgoing_letter' => 'Outgoing Letter',
+        'outgoing_letter_decree' => 'Outgoing Decree',
         'disposition_letter' => 'Disposition Letter',
     ],
     'agenda' => [
         'menu' => 'Agenda',
         'incoming_letter' => 'Incoming Letter',
         'outgoing_letter' => 'Outgoing Letter',
+        'outgoing_letter_decree' => 'Outgoing Letter Decree',
         'disposition_letter' => 'Disposition Letter',
         'filter_by' => 'Filter By',
         'start_date' => 'Start Date',
@@ -22,6 +24,7 @@ return [
         'menu' => 'Letter Gallery',
         'incoming_letter' => 'Incoming Letter',
         'outgoing_letter' => 'Outgoing Letter',
+        'outgoing_letter_decree' => 'Outgoing Decree',
         'disposition_letter' => 'Disposition Letter',
     ],
     'reference' => [

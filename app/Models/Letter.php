@@ -78,6 +78,11 @@ class Letter extends Model
         return $this->scopeType($query, LetterType::OUTGOING);
     }
 
+    public function scopeOutgoingDecree($query)
+    {
+        return $this->scopeType($query, LetterType::OUTGOINGDECREE);
+    }
+
     public function scopeToday($query)
     {
         return $query->whereDate('created_at', now());
