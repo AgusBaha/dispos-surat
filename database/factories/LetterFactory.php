@@ -27,7 +27,7 @@ class LetterFactory extends Factory
             'received_date'=> $this->faker->date(),
             'description' => $this->faker->sentence(7),
             'note' => $this->faker->sentence(3),
-            'type' => $this->faker->randomElement([LetterType::INCOMING->type(), LetterType::OUTGOING->type()]),
+            'type' => $this->faker->randomElement([LetterType::INCOMING->type(), LetterType::OUTGOING->type(), LetterType::OUTGOINGDECREE->type()]),
             'classification_code' => 'ADM',
             'user_id' => 1,
         ];

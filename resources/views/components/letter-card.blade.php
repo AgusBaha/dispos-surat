@@ -28,7 +28,7 @@
                             aria-haspopup="true" aria-expanded="false">
                         <i class="bx bx-dots-vertical-rounded"></i>
                     </button>
-                    @if($letter->type == 'incoming')
+                    @if ($letter->type == 'incoming')
                         <div class="dropdown-menu dropdown-menu-end"
                              aria-labelledby="dropdown-{{ $letter->type }}-{{ $letter->id }}">
                             @if(!\Illuminate\Support\Facades\Route::is('*.show'))
@@ -45,7 +45,7 @@
                                     class="dropdown-item cursor-pointer btn-delete">{{ __('menu.general.delete') }}</span>
                             </form>
                         </div>
-                    @elseif($letter->type == 'outgoing')
+                    @elseif ($letter->type == 'outgoing')
                         <div class="dropdown-menu dropdown-menu-end"
                              aria-labelledby="dropdown-{{ $letter->type }}-{{ $letter->id }}">
                             @if(!\Illuminate\Support\Facades\Route::is('*.show'))

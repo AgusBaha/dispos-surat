@@ -117,4 +117,19 @@ class OutgoingLetterSkController extends Controller
             'title' => $title,
         ]);
     }
+
+      /**
+     * Display the specified resource.
+     *
+     * @param Letter $outgoing
+     * @return View
+     */
+    public function show(Letter $outgoing): View
+    {
+        $data = $outgoing->load(['classification', 'user', 'attachments']);
+        dd($data);
+        return view('pages.transaction.outgoingdecree.show', [
+            'data' => $outgoing->load(['classification', 'user', 'attachments']),
+        ]);
+    }
 }
