@@ -70,8 +70,8 @@
                                 href="{{ route('transaction.outgoingDecree.show', $letter) }}">{{ __('menu.general.view') }}</a>
                         @endif
                         <a class="dropdown-item"
-                            href="{{ route('transaction.outgoing.edit', $letter) }}">{{ __('menu.general.edit') }}</a>
-                        <form action="{{ route('transaction.outgoing.destroy', $letter) }}" class="d-inline"
+                            href="{{ route('transaction.outgoingDecree.edit', $letter) }}">{{ __('menu.general.edit') }}</a>
+                        <form action="{{ route('transaction.outgoingDecree.destroy', $letter) }}" class="d-inline"
                                 method="post">
                             @csrf
                             @method('DELETE')

@@ -548,6 +548,7 @@ class ComposerStaticInitd76664ac480b5c0ff85b517cde059990
         'App\\Http\\Controllers\\LetterGalleryController' => __DIR__ . '/../..' . '/app/Http/Controllers/LetterGalleryController.php',
         'App\\Http\\Controllers\\LetterStatusController' => __DIR__ . '/../..' . '/app/Http/Controllers/LetterStatusController.php',
         'App\\Http\\Controllers\\OutgoingLetterController' => __DIR__ . '/../..' . '/app/Http/Controllers/OutgoingLetterController.php',
+        'App\\Http\\Controllers\\OutgoingLetterDecreeController' => __DIR__ . '/../..' . '/app/Http/Controllers/OutgoingLetterDecreeController.php',
         'App\\Http\\Controllers\\PageController' => __DIR__ . '/../..' . '/app/Http/Controllers/PageController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',

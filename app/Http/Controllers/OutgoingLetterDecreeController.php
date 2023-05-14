@@ -123,9 +123,17 @@ class OutgoingLetterDecreeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Letter $outgoing): RedirectResponse
     {
-        //
+        // try {
+            dd($outgoing);
+            $outgoing->delete();
+            return redirect()
+                ->route('transaction.outgoingDecree.index')
+                ->with('success', __('menu.general.success'));
+        // } catch (\Throwable $exception) {
+        //     return back()->with('error', $exception->getMessage());
+        // }
     }
 
        /**
