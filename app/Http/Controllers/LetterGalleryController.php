@@ -24,4 +24,12 @@ class LetterGalleryController extends Controller
             'search' => $request->search,
         ]);
     }
+
+    public function outgoingDecree(Request $request): View
+    {
+        return view('pages.gallery.outgoingdecree', [
+            'data' => Attachment::outgoingdecree()->render($request->search),
+            'search' => $request->search,
+        ]);
+    }
 }

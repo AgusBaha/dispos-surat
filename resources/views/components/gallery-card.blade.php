@@ -6,8 +6,10 @@
                 <small>
                     @if($letter->type == 'incoming')
                         <a href="{{ route('transaction.incoming.show', $letter) }}" class="fw-bold">{{ $letter->reference_number }}</a>
-                    @else
+                    @elseif($letter->type == 'outgoing')
                         <a href="{{ route('transaction.outgoing.show', $letter) }}" class="fw-bold">{{ $letter->reference_number }}</a>
+                    @else
+                        <a href="{{ route('transaction.outgoingDecree.show', $letter) }}" class="fw-bold">{{ $letter->reference_number }}</a>
                     @endif
                 </small>
             </div>

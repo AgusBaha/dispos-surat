@@ -9,6 +9,7 @@ return [
     ],
     'incoming_letter' => 'Incoming',
     'outgoing_letter' => 'Outgoing',
+    'outgoing_letter_decree' => 'OutgoingDecre',
     'disposition_letter' => 'Disposition',
     'active_user' => 'Active Users',
     'view_more' => 'View More',
